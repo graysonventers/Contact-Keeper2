@@ -1,7 +1,17 @@
 // create our express server
 const express = require('express');
+
+// bring in connectDB to connect database to server
+const connectDB = require('./config/db');
+
 // initialize express server into app variable
 const app = express();
+
+// Connect Database call
+connectDB();
+
+// Init Middleware
+app.use(express.json({ extended: false }));
 
 // add endpoint/route
 app.get('/', (req, res) => res.json({ msg: 'Welcome to the ContactKeeper API...' }));
