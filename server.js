@@ -14,7 +14,7 @@ connectDB();
 app.use(express.json({ extended: false }));
 
 // add endpoint/route
-app.get('/', (req, res) => res.json({ msg: 'Welcome to the ContactKeeper API...' }));
+app.get('/', (req, res) => res.json({ msg: 'Welcome to the ContactKeeper API....ehhhhh' }));
 
 // Define Routes
 app.use('/api/users', require('./routes/users'));
